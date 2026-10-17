@@ -12,7 +12,7 @@ Matnban (متن‌بان, lit. "text-keeper") is a WordPress plugin built specif
 
 ## ✨ Features (Free version)
 
-- **One-click Persian writing correction** — 16 configurable rules: ZWNJ half-space for می/نمی/ها/تر/ترین, Arabic ي/ك → Persian ی/ک, Arabic-Indic digits → Persian digits, Persian quotes «», punctuation spacing, kashida removal, invisible RLM/LRM marks copied from messengers, and more. HTML, Gutenberg blocks, code, shortcodes and links are never touched.
+- **One-click Persian writing correction** — 17 configurable rules: ZWNJ half-space for می/نمی/ها/تر/ترین, Arabic ي/ك → Persian ی/ک, Arabic-Indic digits → Persian digits, Persian quotes «», punctuation spacing, kashida removal, invisible RLM/LRM marks copied from messengers, and more. HTML, Gutenberg blocks, code, shortcodes and links are never touched.
 - **Persian readability analysis** in the editor (Gutenberg + Classic): 0–100 score with 9 readability checks and 6 keyphrase checks — each explained in Persian.
 - **Persian-aware keyphrase counting** — reads the keyphrase from Yoast or Rank Math and counts word variants with Persian stemming: «کتاب», «کتاب‌ها», «کتابی» count as one.
 - **Persian image SEO** — transliterated, SEO-friendly image filenames + automatic Persian alt text.
@@ -40,7 +40,7 @@ The premium version (from the developer's site) adds bulk correction of your ent
 
 ## 🤝 Contributing & Support
 
-Bug reports and feature suggestions are welcome in [Issues](https://github.com/webbanwp/matnban/issues). Persian-language support is provided through the [website contact page](https://webbanwp.ir/contact-us/). Pull requests for the Persian rules dictionary are especially welcome.
+Bug reports and feature suggestions are welcome in [Issues](https://github.com/webbanwp/matnban/issues). Persian-language support is provided through the [website contact page](https://webbanwp.ir/contact-us/). Pull requests for the Persian dictionary are especially welcome.
 
 ## 📄 License
 
@@ -56,7 +56,7 @@ GPL v2 or later. See [LICENSE](LICENSE). The Persian rules engine and dictionari
 
 ## ✨ امکانات (نسخهٔ رایگان)
 
-- **اصلاح نگارش فارسی با یک کلیک** — ۱۶ قاعدهٔ قابل تنظیم: نیم‌فاصلهٔ می/نمی/ها/تر/ترین، تبدیل ي و ك عربی، ارقام فارسی، گیومهٔ فارسی، فاصله‌گذاری علائم، حذف کشیده، نویسه‌های نامرئی RLM/LRM و… . به HTML، بلوک‌ها، کدها، شورت‌کدها و لینک‌ها هرگز دست نمی‌زند.
+- **اصلاح نگارش فارسی با یک کلیک** — ۱۷ قاعدهٔ قابل تنظیم: نیم‌فاصلهٔ می/نمی/ها/تر/ترین، تبدیل ي و ك عربی، ارقام فارسی، گیومهٔ فارسی، فاصله‌گذاری علائم، حذف کشیده، نویسه‌های نامرئی RLM/LRM و… . به HTML، بلوک‌ها، کدها، شورت‌کدها و لینک‌ها هرگز دست نمی‌زند.
 - **تحلیل خوانایی فارسی** داخل ویرایشگر (گوتنبرگ + کلاسیک): امتیاز ۰ تا ۱۰۰ با ۹ بررسی خوانایی و ۶ بررسی کلمهٔ کلیدی، همه با توضیح فارسی.
 - **شمارش کلمهٔ کلیدی با ریشه‌یابی فارسی** — کلمهٔ کلیدی از Yoast/Rank Math خوانده می‌شود و «کتاب»، «کتاب‌ها»، «کتابی» یکی شمرده می‌شوند.
 - **سئوی تصاویر فارسی** — نام فایل انگلیسیِ سئوشده + متن جایگزین خودکار.
@@ -84,7 +84,7 @@ GPL v2 or later. See [LICENSE](LICENSE). The Persian rules engine and dictionari
 
 ## 🤝 مشارکت و پشتیبانی
 
-گزارش باگ و پیشنهادها در [Issues](https://github.com/webbanwp/matnban/issues) خوش‌آمد است. پشتیبانی فارسی از طریق [صفحهٔ تماس سایت](https://webbanwp.ir/contact-us/). پول‌ریکوئست‌های واژه‌نامهٔ قواعد فارسی — از جمله واژه‌های منطقه‌ای و تخصصی — بیش از همه خوش‌آمد است.
+گزارش باگ و پیشنهادها در [Issues](https://github.com/webbanwp/matnban/issues) خوش‌آمد است. پشتیبانی فارسی از طریق [صفحهٔ تماس سایت](https://webbanwp.ir/contact-us/). پول‌ریکوئست‌های واژه‌نامهٔ فارسی — از جمله واژه‌های منطقه‌ای و تخصصی — بیش از همه خوش‌آمد است.
 
 ## 📄 مجوز
 
