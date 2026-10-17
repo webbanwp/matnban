@@ -15,7 +15,6 @@ Matnban (متن‌بان, lit. "text-keeper") is a WordPress plugin built specif
 - **One-click Persian writing correction** — 16 configurable rules: ZWNJ half-space for می/نمی/ها/تر/ترین, Arabic ي/ك → Persian ی/ک, Arabic-Indic digits → Persian digits, Persian quotes «», punctuation spacing, kashida removal, invisible RLM/LRM marks copied from messengers, and more. HTML, Gutenberg blocks, code, shortcodes and links are never touched.
 - **Persian readability analysis** in the editor (Gutenberg + Classic): 0–100 score with 9 readability checks and 6 keyphrase checks — each explained in Persian.
 - **Persian-aware keyphrase counting** — reads the keyphrase from Yoast or Rank Math and counts word variants with Persian stemming: «کتاب», «کتاب‌ها», «کتابی» count as one.
-- **Smart English slugs** for new posts: «آموزش سئو برای مبتدی‌ها» → `tutorial-seo-beginner` (3,000+ word dictionary + custom glossary). Existing slugs are never changed.
 - **Persian image SEO** — transliterated, SEO-friendly image filenames + automatic Persian alt text.
 - **Front-end correction mode** — display clean text without touching the database; cache-plugin friendly.
 - **Word-like text alignment** — justify / right / center / left, applied safely.
@@ -60,7 +59,6 @@ GPL v2 or later. See [LICENSE](LICENSE). The Persian rules engine and dictionari
 - **اصلاح نگارش فارسی با یک کلیک** — ۱۶ قاعدهٔ قابل تنظیم: نیم‌فاصلهٔ می/نمی/ها/تر/ترین، تبدیل ي و ك عربی، ارقام فارسی، گیومهٔ فارسی، فاصله‌گذاری علائم، حذف کشیده، نویسه‌های نامرئی RLM/LRM و… . به HTML، بلوک‌ها، کدها، شورت‌کدها و لینک‌ها هرگز دست نمی‌زند.
 - **تحلیل خوانایی فارسی** داخل ویرایشگر (گوتنبرگ + کلاسیک): امتیاز ۰ تا ۱۰۰ با ۹ بررسی خوانایی و ۶ بررسی کلمهٔ کلیدی، همه با توضیح فارسی.
 - **شمارش کلمهٔ کلیدی با ریشه‌یابی فارسی** — کلمهٔ کلیدی از Yoast/Rank Math خوانده می‌شود و «کتاب»، «کتاب‌ها»، «کتابی» یکی شمرده می‌شوند.
-- **نامک انگلیسی هوشمند** برای مطالب جدید: «آموزش سئو برای مبتدی‌ها» ← `tutorial-seo-beginner` (واژه‌نامهٔ ۳۰۰۰+ واژه + واژه‌نامهٔ اختصاصی شما). نامک مطالب منتشرشده هرگز عوض نمی‌شود.
 - **سئوی تصاویر فارسی** — نام فایل انگلیسیِ سئوشده + متن جایگزین خودکار.
 - **اصلاح هنگام نمایش** — بدون تغییر دیتابیس؛ سازگار با افزونه‌های کش.
 - **چینش متن مثل Word** — تراز دوطرفه، راست‌چین، وسط‌چین، چپ‌چین؛ فقط ظاهر، بدون دست‌زدن به ساختار.
@@ -74,7 +72,7 @@ GPL v2 or later. See [LICENSE](LICENSE). The Persian rules engine and dictionari
 
 ## 💎 نسخهٔ کامل
 
-اصلاح گروهی کل آرشیو، دستیار هوش مصنوعی (با کلید API خودتان) و موتور کامل نامک هوشمند: **[webbanwp.ir/fileban/matnban](https://webbanwp.ir/fileban/matnban/)** — پشتیبانی فارسی مستقیم سازنده، به‌روزرسانی دائمی نسخه‌های ۱.x، تحویل آنی.
+اصلاح گروهی کل آرشیو، دستیار هوش مصنوعی (با کلید API خودتان) و موتور نامک هوشمند برای مطالب: **[webbanwp.ir/fileban/matnban](https://webbanwp.ir/fileban/matnban/)** — پشتیبانی فارسی مستقیم سازنده، به‌روزرسانی دائمی نسخه‌های ۱.x، تحویل آنی.
 
 ## 🔗 لینک‌ها
 
