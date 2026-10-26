@@ -64,6 +64,8 @@ class MATNBAN_Report {
 		$normalizer->reset_stats();
 		Matnban::walker()->process( $content );
 		$normalizer->normalize( $title );
+		/* چکیده هم باید در اسکن دیده شود — همان‌طور که «اصلاح هنگام ذخیره» آن را تغییر می‌دهد (F09) */
+		Matnban::walker()->process( (string) $post->post_excerpt );
 		$stats = $normalizer->get_stats();
 		$normalizer->reset_stats();
 
@@ -453,6 +455,9 @@ class MATNBAN_Report {
 			if ( $next ) {
 				wp_clear_scheduled_hook( self::CRON );
 			}
+			/* رویداد «ادامهٔ اسکن» و پیشرفت آن هم باید پاک شود وگرنه اسکن بعد از خاموش کردن ادامه می‌یابد (F10) */
+			wp_clear_scheduled_hook( self::CRON_CONTINUE );
+			delete_option( 'matnban_cron_progress' );
 			return;
 		}
 		/* اگر تناوب رویداد موجود با تنظیم تازه فرق دارد (مثلاً هفتگی ← روزانه)، زمان‌بندی اصلاح شود */
@@ -465,6 +470,11 @@ class MATNBAN_Report {
 	}
 
 	public function cron_scan() {
+		/* تنظیم ممکن است بعد از زمان‌بندی رویداد «ادامه» خاموش شده باشد — در ابتدا دوباره چک شود (F10) */
+		if ( 'off' === (string) Matnban::get( 'report_schedule', 'weekly' ) ) {
+			delete_option( 'matnban_cron_progress' );
+			return;
+		}
 		$types = self::post_types();
 		if ( empty( $types ) ) {
 			return;

@@ -3,7 +3,7 @@
 **متن‌بان** — دستیار نگارش و سئوی محتوای فارسی وردپرس
 
 [![WordPress Plugin](https://img.shields.io/badge/WordPress-Plugin-21759b?logo=wordpress)](https://wordpress.org/plugins/matnban/)
-[![Version](https://img.shields.io/badge/version-1.0.0-8ed557)](https://wordpress.org/plugins/matnban/)
+[![Version](https://img.shields.io/badge/version-1.0.2-8ed557)](https://wordpress.org/plugins/matnban/)
 [![License](https://img.shields.io/badge/license-GPL_v2-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 Matnban (متن‌بان, lit. "text-keeper") is a WordPress plugin built specifically for **Persian (Farsi)** content. International SEO tools like Yoast and Rank Math are designed for English; their readability analysis is blind to the writing errors that matter most in Persian — half-spaces (ZWNJ), Arabic look-alike characters, Arabic-Indic digits, and punctuation that breaks RTL rendering. Matnban fills exactly that gap and works **alongside** your SEO plugin, not instead of it.

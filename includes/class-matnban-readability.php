@@ -37,7 +37,8 @@ class MATNBAN_Readability {
 	}
 
 	public static function sentences( $text ) {
-		$parts = preg_split( '/(?<=[.!?؟…])\s+|\n+/u', $text, -1, PREG_SPLIT_NO_EMPTY );
+		/* ؛ هم پایان جمله حساب می‌شود — اصلاح ۱.۰.۲ */
+		$parts = preg_split( '/(?<=[.!?؟؛…])\s+|\n+/u', $text, -1, PREG_SPLIT_NO_EMPTY );
 		if ( ! is_array( $parts ) ) {
 			$parts = array();
 		}

@@ -9,6 +9,8 @@ class MATNBAN_Media {
 	public function __construct() {
 		if ( Matnban::get( 'media_rename' ) ) {
 			add_filter( 'wp_handle_upload_prefilter', array( $this, 'rename' ) );
+			/* فایل‌های side-load شده (مانند آپلود از افزونه‌ها و API) هم تغییر نام بگیرند — اصلاح ۱.۰.۲ */
+			add_filter( 'wp_handle_sideload_prefilter', array( $this, 'rename' ) );
 		}
 		if ( Matnban::get( 'media_alt' ) ) {
 			add_action( 'add_attachment', array( $this, 'set_alt' ) );

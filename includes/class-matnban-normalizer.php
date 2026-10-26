@@ -192,7 +192,9 @@ class MATNBAN_Normalizer {
 		if ( $this->on( 'prefix_mi' ) ) {
 			/* «می» به‌عنوان اسم مستقل (ماهِ مِی، جامِ می، قدِ می…) به واژهٔ بعدی نچسبد */
 			$MI_NOUN = '(?<!ماه )(?<!جام )(?<!قد )(?<!باده )(?<!پیمانه )';
-			$text = preg_replace( '/' . $MI_NOUN . $B . '(ن?می)' . $SP . '(?=[' . $AL . ']{2,})/u', '$1' . $Z, $text, -1, $n );
+			/* «می را» (می + حرف را): می این‌جا اسم/مفعول است، نه پیشوند فعل — نمی‌چسبد */
+			$RA = '(?!را(?![' . $AL . ']))';
+			$text = preg_replace( '/' . $MI_NOUN . $B . '(ن?می)' . $SP . $RA . '(?=[' . $AL . ']{2,})/u', '$1' . $Z, $text, -1, $n );
 			$this->add_stat( 'prefix_mi', $n );
 		}
 
@@ -207,12 +209,14 @@ class MATNBAN_Normalizer {
 		}
 
 		if ( $this->on( 'suffix_tar' ) ) {
-			$text = preg_replace( '/(?<=[' . $AL . '])' . $SP . '(تر|ترین)' . $E . '/u', $Z . '$1', $text, -1, $n );
+			/* واژهٔ قبلی دست‌کم دو حرف داشته باشد تا «خشک و تر» (تر = خیس) دست نخورد — اصلاح ۱.۰.۱ */
+			$text = preg_replace( '/(?<=[' . $AL . '][' . $AL . '])' . $SP . '(تر|ترین)' . $E . '/u', $Z . '$1', $text, -1, $n );
 			$this->add_stat( 'suffix_tar', $n );
 		}
 
 		if ( $this->on( 'suffix_verb' ) ) {
-			$text = preg_replace( '/(?<=ه)' . $SP . '(ام|ای|ایم|اید|اند)' . $E . '/u', $Z . '$1', $text, -1, $n );
+			/* «که ای کاش»، «چه ای»، «نه ای» ندا/قید است، نه شناسهٔ فعل — اصلاح ۱.۰.۱ */
+			$text = preg_replace( '/(?<!(?<![' . $AL . '\x{200C}])که)(?<!(?<![' . $AL . '\x{200C}])چه)(?<!(?<![' . $AL . '\x{200C}])نه)(?<=ه)' . $SP . '(ام|ای|ایم|اید|اند)' . $E . '/u', $Z . '$1', $text, -1, $n );
 			$this->add_stat( 'suffix_verb', $n );
 		}
 
@@ -277,7 +281,8 @@ class MATNBAN_Normalizer {
 		return preg_replace_callback(
 			'~(https?://[^\s<>"«»]+|www\.[^\s<>"«»]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})~u',
 			function ( $m ) use ( &$placeholders, &$i ) {
-				$key                  = "\u{E000}" . $i . "\u{E001}";
+				/* کلید بدون رقم و حروف الفبا تا هیچ قاعده‌ای (مثل latin_digits) آن را تغییر ندهد — اصلاح ۱.۰.۲ */
+				$key                  = "\u{E000}" . str_repeat( "\u{E002}", $i + 1 ) . "\u{E001}";
 				$placeholders[ $key ] = $m[0];
 				$i++;
 				return $key;
